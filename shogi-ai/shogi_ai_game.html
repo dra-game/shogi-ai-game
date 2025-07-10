@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>5x5 将棋AI対戦</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+  <body>
+      <div class="board-container">
+        <h1>5x5 将棋AI対戦</h1>
+
+        <label for="difficulty">難易度：</label>
+        <select id="difficulty" onchange="setDifficulty(this.value)">
+          <option value="normal" selected>ふつう</option>
+          <option value="hard">むずかしい</option>
+        </select>
+
+        <div id="gameContainer">
+          <div class="captured-area" id="aiCapturedArea">
+            <h3>持ち駒</h3>
+            <div id="aiCaptured"></div>
+          </div>
+
+          <div id="board"></div>
+
+          <div class="ai-piece"></div>
+
+          <div class="captured-area" id="playerCapturedArea">
+            <h3>持ち駒</h3>
+            <div id="playerCaptured"></div>
+          </div>
+        </div>
+      </div> 
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,212 @@
+
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      max-width: 800px;
+      text-align: center;
+    }
+
+
+    #difficulty {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #gameContainer {
+      display: flex;
+      justify-content: center; 
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%; 
+      max-width: 800px;
+    }
+
+
+   #board {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      grid-template-rows: repeat(5, 60px);
+      gap: 2px;
+      width: max-content;
+      margin: 0 auto;
+      background-image: url('ki.png'); 
+      background-size: cover;
+      background-position: center;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #8B4513;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    }
+
+
+    .cell {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      font-size: 24px;
+      background-color: url('ki.png'); 
+      background-size: cover;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .cell span {
+      font-weight: bold;
+      pointer-events: none;
+    }
+
+    .ai-piece {
+      transform: rotate(180deg);
+    }
+
+    .player-piece {
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    .piece-ou {
+      background-image: url('ou-removebg.png'); /* 王将 */
+    }
+
+    .piece-kin {
+      background-image: url('kin-removebg.png'); /* 金将 */
+    }
+
+    .piece-gin {
+      background-image: url('gin-removebg.png'); /* 銀将 */
+    }
+
+
+    
+
+
+    .selected {
+      background-color: #ffd700 !important;
+      border: 2px solid red;
+    }
+
+    .highlight {
+      background-color: #90ee90 !important;
+    }
+
+    .captured-piece {
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 4px;
+      cursor: pointer;
+    }
+
+    .captured-ou {
+      background-image: url('ou-removebg.png');
+    }
+
+    .captured-kin {
+      background-image: url('kin-removebg.png');
+    }
+
+    .captured-gin {
+      background-image: url('gin-removebg.png');
+    }
+
+    .captured-selected {
+      border: 2px solid red;
+      background-color: #ffcccb;
+    }
+
+
+    .captured-selected {
+      background-color: #ffcccb !important;
+      border: 2px solid red;
+    }
+
+    .captured-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .captured-area h3 {
+      margin-bottom: 5px;
+    }
+
+    .captured-area .cell {
+      display: block;
+      margin: 4px auto;
+      background-color: #d0f0ff;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      border: 1px solid #999;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+
+  @media (max-width: 600px) {
+    #board {
+      grid-template-columns: repeat(5, 40px);
+      grid-template-rows: repeat(5, 40px);
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+
+    .captured-area .cell {
+      font-size: 16px;
+      padding: 3px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    select {
+      font-size: 14px;
+    }
+  }
+
+
